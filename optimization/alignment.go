@@ -33,7 +33,7 @@ func (o ts) Swap(i, j int) {
 func Optimization(value interface{}) {
 	v := reflect.TypeOf(value)
 	if v.Kind() != reflect.Struct {
-		fmt.Println("草泥马的")
+		fmt.Println("value not struct")
 		return
 	}
 	s := []t{}
