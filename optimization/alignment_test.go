@@ -4,16 +4,16 @@ import "testing"
 
 type (
 	Struct1 struct {
-		FieldA int
-		FieldB string
-		FieldC bool
+		FieldA int    `json:"field_a" validate:"min=0,max=100"`
+		FieldB string `json:"field_b" validate:"required"`
+		FieldC bool   `json:"-"`
 		C      byte
-		FieldD []string
-		B      int8
-		FieldE interface{}
-		A      int8
-		FieldF float32
-		T      struct{}
+		FieldD []string    `json:"field_d"`
+		B      int8        `json:"-"`
+		FieldE interface{} `json:"field_e"`
+		A      int8        "asdasddasdsd "
+		FieldF float32     `json:"field_f" example:"3.14"`
+		T      struct{}    `json:"-"`
 	}
 
 	Struct2 struct {
